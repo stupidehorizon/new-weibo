@@ -1,0 +1,28 @@
+{
+  "name": "new-weibo",
+  "version": "1.0.0",
+  "description": "node+express+ejs+mongodb 打造的一个实时分享平台，可实现注册，登录，发布图文，点赞，评论功能。",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stupidehorizon/new-weibo.git"
+  },
+  "keywords": [
+    "Node",
+    "MongoDB",
+    "Express"
+  ],
+  "author": "xiexin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stupidehorizon/new-weibo/issues"
+  },
+  "homepage": "https://github.com/stupidehorizon/new-weibo#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}
