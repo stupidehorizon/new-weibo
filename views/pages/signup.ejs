@@ -1,0 +1,24 @@
+<% include ../includes/header %>
+<link rel="stylesheet" type="text/css" href="./css/signin.css">
+</head>
+<body>
+<div class="signin">
+	<form class="login" method="POST" action="/signup">
+		<h1><%= title %></h1>
+		<div>
+			<label for="name">邮箱:</label>
+			<input type="text" id="name" autofocus name="user[name]" required>
+			<span class="error">This is an error</span>
+		</div>
+		<div>
+			<label for="pas">密码:</label>
+			<input type="password" id="pas" name="user[password]" required>
+			<span class="error">This is an error</span>
+		</div>
+		<input type="submit" value="确认" id="submit">
+		<a href="/showsignin" rel="register" class="linkform"><h2>没有有账户？点击注册</h2></a>
+	
+	</form>
+</div>
+</body>
+</html>

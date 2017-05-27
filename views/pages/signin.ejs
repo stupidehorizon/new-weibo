@@ -1,0 +1,34 @@
+<% include ../includes/header %>
+<link rel="stylesheet" type="text/css" href="./css/signin.css">
+</head>
+<body>
+<div class="signin">
+	<form class="login" method="POST" action="/signin">
+		<h1><%= title %></h1>
+		<div>
+			<label for="passname">登录邮箱:</label>
+			<input type="email" id="passname" autofocus name="user[passname]" required>
+			<span class="error">This is an error</span>
+		</div>
+		<div>
+			<label for="pasword">登录密码:</label><span>6~12个字符</span>
+			<input type="password" id="pasword" name="user[password]" minLength="6" maxLength="12" required>
+			<span class="error">This is an error</span>
+		</div>
+		<div>
+			<label for="name">昵称:</label>
+			<input type="text" id="name" name="user[name]" maxLength="9" required>
+			<span class="error">This is an error</span>
+		</div>
+		<div>
+			<label for="sex">性别:</label></br>
+			<label for="male" class="inline">男:</label><input type="radio" id="male"  name="user[sex]" value="male" class="sex">
+			<label for="female" class="inline">女:</label><input type="radio" name="user[sex]" value="female" class="sex">
+			<span class="error">This is an error</span>
+		</div>
+		<input type="submit" value="确认" id="submit">
+		<a href="/showsignup" rel="register" class="linkform"><h2>已经有账户？点击登录</h2></a>
+	</form>
+</div>
+</body>
+</html>

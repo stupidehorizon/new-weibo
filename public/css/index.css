@@ -1,5 +1,11 @@
 body {
-  background-color: green;
+  background-color: #a5cfe8;
+}
+a {
+  cursor: pointer;
+}
+.clear {
+  clear: both;
 }
 .logo-btn {
   display: inline-block;
@@ -25,6 +31,7 @@ body {
   position: relative;
   top: 3px;
   margin-right: 5px;
+  color: #6c5d64;
 }
 .fix-head {
   width: 100%;
@@ -65,6 +72,7 @@ body {
   display: inline-block;
 }
 .fix-head .head-content .search-box input {
+  outline-color: #ff7d0e;
   border-radius: 1px;
   border: 1px solid #eee;
   box-shadow: none;
@@ -79,12 +87,260 @@ body {
   color: #948989;
 }
 .fix-head .head-content .head-nav {
-  margin-left: 100px;
+  margin-left: 20px;
 }
 .fix-head .head-content .log {
+  position: relative;
   float: right;
 }
 .fix-head .head-content .log ul {
   height: 46px;
   line-height: 46px;
+}
+.fix-head .head-content .log .edit {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100px;
+  background-color: #fff;
+}
+.fix-head .head-content .log .edit ul {
+  height: auto;
+  line-height: 20px;
+}
+.fix-head .head-content .log .edit ul li {
+  font-size: 20px;
+}
+.fix-head .head-content .log .edit::before {
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-color: red;
+  content: ' ';
+  position: absolute;
+  top: -20px;
+}
+.container {
+  padding: 0;
+  width: 1000px;
+  margin: 46px auto 0 auto;
+  background-color: #62a7d1;
+}
+.container .nav-left {
+  margin-top: 10px;
+  float: left;
+  width: 150px;
+}
+.container .nav-left a {
+  padding-left: 15px;
+  color: white;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+}
+.container .nav-left a:hover {
+  text-decoration: none;
+  background-color: #7fb9db;
+}
+.container .nav-left a h1 {
+  font-size: 14px;
+  font-weight: bold;
+  height: 34px;
+  line-height: 34px;
+}
+.container .nav-left a h2 {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.container .nav-left .line {
+  margin-top: 15px;
+  height: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.container .middle-content {
+  display: inline-block;
+  width: 600px;
+  margin-top: 10px;
+}
+.container .middle-content .publish-area {
+  padding: 10px 5px 5px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1px;
+}
+.container .middle-content .publish-area .head-title {
+  color: #1f99f3;
+}
+.container .middle-content .publish-area textarea {
+  width: 100%;
+  margin-top: 5px;
+  min-height: 90px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  outline-color: #ff7d0e;
+  padding: 5px;
+  box-shadow: 0 0 2px #cccccc inset;
+}
+.container .middle-content .publish-area .func-area {
+  font-size: 14px;
+  line-height: 35px;
+}
+.container .middle-content .publish-area .func-area .dot {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container .middle-content .publish-area .func-area ul {
+  line-height: 35px;
+}
+.container .middle-content .publish-area .func-area .privacy {
+  font-size: 12px;
+}
+.container .middle-content .publish-area .func-area .privacy span {
+  font-size: 12px;
+}
+.container .middle-content .publish-area .func-area #publish {
+  display: inline-block;
+  background-color: #ff7d0e;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 3px;
+  color: #fff;
+  border: 0;
+}
+.container .middle-content .content-area {
+  margin-top: 10px;
+}
+.container .middle-content .content-area .head-switch {
+  width: 100%;
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+}
+.container .middle-content .content-area .head-switch ul {
+  height: 30px;
+  line-height: 30px;
+}
+.container .middle-content .content-area .content-box {
+  position: relative;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+.container .middle-content .content-area .content-box .head-img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.container .middle-content .content-area .content-box .head-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.container .middle-content .content-area .content-box .content {
+  margin-left: 70px;
+  display: block;
+  padding-right: 30px;
+}
+.container .middle-content .content-area .content-box .content h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.container .middle-content .content-area .content-box .content h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.container .middle-content .content-area .content-box .content .img-box {
+  -moz-column-count: 3;
+  /* Firefox */
+  -webkit-column-count: 3;
+  /* Safari and Chrome */
+  column-count: 3;
+  -webkit-column-gap: 110px;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 10px;
+  /* Firefox */
+  column-gap: 10px;
+  margin: 5px;
+}
+.container .middle-content .content-area .content-box .content .img-box img {
+  margin-top: 5px;
+  width: 100%;
+  height: auto;
+}
+.container .middle-content .content-area .content-box .content-bottom {
+  border-top: 1px solid  #ccc;
+  width: 100%;
+}
+.container .middle-content .content-area .content-box .content-bottom .logo-btn {
+  width: 100%;
+}
+.container .middle-content .content-area .content-box .content-bottom ul > li {
+  width: 24%;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  margin: 0;
+}
+.container .middle-content .content-area .content-box .content-bottom li:last-child {
+  border-right: 0;
+}
+.container .right-info {
+  display: block;
+  float: right;
+  margin-right: 5px;
+  margin-top: 10px;
+  width: 230px;
+  margin-left: 10px;
+}
+.container .right-info .personal-info {
+  position: relative;
+  padding: 0;
+  height: 176px;
+  width: 100%;
+  background-color: #fff;
+}
+.container .right-info .personal-info .skin img {
+  height: 88px;
+  width: 100%;
+}
+.container .right-info .personal-info .info {
+  width: 100%;
+  height: 88px;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 28px;
+}
+.container .right-info .personal-info .info h1,
+.container .right-info .personal-info .info h2 {
+  font-weight: bold;
+  color: black;
+}
+.container .right-info .personal-info .info a {
+  font-size: 18px;
+  color: #000;
+}
+.container .right-info .personal-info .info a:hover {
+  color: #ff7d0e;
+  text-decoration: none;
+}
+.container .right-info .personal-info .avatar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  background: url('../img/01.jpg') no-repeat top left;
+  background-size: cover;
 }

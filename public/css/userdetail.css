@@ -1,0 +1,12 @@
+body {
+  background-color: #a5cfe8;
+}
+#userdetail {
+  width: 1000px;
+  margin: 0 auto;
+}
+#userdetail .head {
+  height: 200px;
+  background: url(img/02.jpg) no-repeat top left;
+  background-size: cover;
+}
