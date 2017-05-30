@@ -97,16 +97,36 @@ a {
   height: 46px;
   line-height: 46px;
 }
+.fix-head .head-content .log .edit-btn {
+  vertical-align: top;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.fix-head .head-content .log .edit-hover {
+  display: inline-block;
+}
+.fix-head .head-content .log .edit-hover:hover .edit {
+  height: 270px;
+  border-width: 1px;
+  opacity: 1;
+}
+.fix-head .head-content .log .edit-hover:hover .triangle {
+  opacity: 1;
+}
 .fix-head .head-content .log .edit {
-  display: none;
+  opacity: 0;
+  overflow: hidden;
   text-align: center;
   position: absolute;
-  top: 100%;
-  left: 50px;
-  border: 1px solid #ccc;
+  transition: all 0.5s;
+  top: 30px;
+  left: -65px;
+  border: 0px solid #ccc;
   border-radius: 3px;
   width: 100px;
+  height: 0;
   background-color: #fff;
+  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.2);
 }
 .fix-head .head-content .log .edit ul {
   height: auto;
@@ -115,14 +135,33 @@ a {
 .fix-head .head-content .log .edit ul li {
   font-size: 20px;
 }
-.fix-head .head-content .log .edit::before {
+.fix-head .head-content .log .triangle {
+  top: 30px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s;
+}
+.fix-head .head-content .log .triangle:before {
   width: 0;
   height: 0;
   border-width: 10px;
-  border-color: red;
-  content: ' ';
+  border-color: transparent transparent #dadada transparent;
+  content: '';
   position: absolute;
   top: -20px;
+  border-style: solid;
+  left: 70%;
+}
+.fix-head .head-content .log .triangle:after {
+  width: 0;
+  height: 0;
+  border-width: 11px;
+  border-color: transparent transparent #fff transparent;
+  content: '';
+  position: absolute;
+  top: -20px;
+  border-style: solid;
+  left: 70%;
 }
 .container {
   padding: 0;

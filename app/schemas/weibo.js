@@ -5,6 +5,7 @@ const ObjectId = Schema.Types.ObjectId
 var WeiboSchema = new Schema({
   content:String,
   from: {type:ObjectId,ref:'User'},
+  imgUrl:String,
   meta: {
     createAt: {
       type: Date,

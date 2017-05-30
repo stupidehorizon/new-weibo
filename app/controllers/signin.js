@@ -16,7 +16,6 @@ exports.showSignup=(req,res)=>{
 //注册
 exports.signin = function(req, res) {
   var _user = req.body.user
-  console.log(_user)
   User.findOne({passname: _user.passname},  function(err, user) {
     if (err) {
       console.log(err)
@@ -53,7 +52,8 @@ exports.signup=function(req,res){
       console.log("用户不存在")
       return res.redirect('/showsignin')
     }
-
+    console.log(user.password)
+    console.log(password)
     user.comparePassword(password,function(err,isMatch){
       if(err){
         console.log(err)

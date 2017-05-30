@@ -1,6 +1,10 @@
 const Index = require('../app/controllers/index')
 const Signin=require('../app/controllers/signin')
-const Weibo=require('../app/controllers/weibo')  
+const Weibo=require('../app/controllers/weibo') 
+const User=require('../app/controllers/useredit') 
+const multipart = require('connect-multiparty')
+const multipartMiddleware = multipart()
+//app.use(multipartMiddleware)
 
 module.exports=function(app){
 	app.get('/',Index.index)
@@ -9,6 +13,8 @@ module.exports=function(app){
 	app.post('/signin',Signin.signin)
 	app.post('/signup',Signin.signup)
 	app.get('/logout',Signin.logout)
-	app.post('/publish',Weibo.publish)
+	app.post('/publish',multipartMiddleware,Weibo.imgUpload,Weibo.publish)
+	app.get('/useredit',User.show)
+	app.post('/username',User.namechange)
 }
 

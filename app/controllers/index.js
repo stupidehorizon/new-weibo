@@ -5,7 +5,6 @@ exports.index=function(req,res){
       .find({})
       .populate('from', 'name')
       .exec(function(err, weibos) {
-      		console.log(weibos)
 	        res.render('index', {
 	          title: "微博首页",
 	          weibos:weibos

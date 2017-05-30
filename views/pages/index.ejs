@@ -25,22 +25,26 @@
 				</ul>
 			<% }else{ %>
 				<ul>
-					<li><a><span class="glyphicon glyphicon-user"></a></span><a><%= user.name %></a><span class="glyphicon glyphicon-cog"></li>
-					<div class="edit">
-						<ul>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-							<div class="clear"></div>
-						</ul>
+					<li><a><span class="glyphicon glyphicon-user"></a></span><a><%= user.name %></a></li>
+					<div class="edit-hover">
+						<span class="glyphicon glyphicon-cog edit-btn">
+						<div class="edit">
+							<ul>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/useredit">账号设置</a></li>
+								<li><a href="/logout">退出登录</a></li>
+								<div class="clear"></div>
+							</ul>
+						</div>
+						<div class="triangle"></div>
 					</div>
-					<li><a href="/logout">退出登录</a></li>
 				</ul>
 			<% } %>
 		</div>
@@ -61,14 +65,14 @@
 	<div class="middle-content">
 		<div class="publish-area">
 			<div class="head-title"><h2>有什么新鲜事想告诉大家？</h2></div>
-			<form class="login" method="POST" action="/publish">
+			<form class="login" method="POST" action="/publish" enctype="multipart/form-data">
 				<textarea cols="3" name="weibo[content]"></textarea>
 				<input type="hidden" name="weibo[from]" value="<%= user._id %>"> 
 				<div class="func-area logo-btn">
 					<ul>
 						<li><a href="#"><span class="glyphicon glyphicon-magnet"></span>表情</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span>视频</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-picture"></span>图片</a></li>
+						<li><input type="file" name="img"></li>
 						<li><a href="#"><span class="glyphicon glyphicon-header"></span>话题</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-align-center"></span>头条文章</a></li>
 						<li><a href="#" class="dot">···</a></li>
@@ -98,6 +102,9 @@
 						<p><%= moment(weibo.meta.createAt).fromNow() %> 来自iphone8</p>
 						<h2><%= weibo.content %> </h2>
 					</div>
+					<div class="img-box">
+						<img src="<%= weibo.imgUrl %>">
+					</div>
 					<div class="content-bottom logo-btn">
 						<ul>
 							<li><a href="#"><span class="glyphicon glyphicon-star-empty"></span>收藏</a></li>
@@ -117,7 +124,11 @@
 				<img src="./img/02.jpg">
 			</div>
 			<div class="info">
-				<a href="/userdetail/<%= user._id %>"><%= user.name %></a>
+				<% if(!user){ %>
+				<a href="/userdetail/<%= user._id %>">游侠</a></br>
+				<% }else{%>
+				<a href="/userdetail/<%= user._id %>"><%= user.name %></a></br>
+				<% }%>
 				<div class="logo-btn">
 					<ul>
 						<li><a href="#">145</br></a>关注</li>
@@ -129,5 +140,7 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>

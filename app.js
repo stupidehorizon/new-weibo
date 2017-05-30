@@ -8,7 +8,11 @@ const dbUrl='mongodb://localhost/weibo1'
 const bodyParser=require('body-parser')
 const moment=require('moment')
 const morgan = require('morgan')
-const Weibo= require('./app/models/weibo')
+const multipart = require('connect-multiparty')
+const path=require('path')
+const fs = require('fs')
+//const multipartMiddleware = multipart()
+//const Weibo= require('./app/models/weibo')
 
 mongoose.Promise = global.Promise
 
@@ -44,6 +48,7 @@ app.use(session(
 )
 
 app.use(bodyParser.urlencoded({extended:true}))
+//app.use(multipartMiddleware)
 
 require('./config/routes')(app)
 
