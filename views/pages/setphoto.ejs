@@ -1,0 +1,92 @@
+<% include ../includes/header %>
+<link rel="stylesheet" type="text/css" href="/css/setinfo.css">
+</head>
+<body>
+	<div class="fix-head">
+	<div class="head-content">
+		<div class="left-logo">
+			<a href="/"><span><!--logo--></span></a>
+		</div>
+		<div class="search-box">
+			<input type="text" placeholder="搜点什么？"><span class="glyphicon glyphicon-search"></span>
+		</div>
+		<div class="head-nav logo-btn">
+			<ul>
+				<li><a href="/"><span class="glyphicon glyphicon-home"></span>首页</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span>视频</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>发现</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-headphones"></span>游戏</a></li>
+			</ul>
+		</div>
+		<div class="log logo-btn">
+			<% if(!user){ %>
+				<ul>
+					<li><a href="/showsignin">注册</a></li>
+					<li><a href="/showsignup">登录</a></li>
+				</ul>
+			<% }else{ %>
+				<ul>
+					<li><a><span class="glyphicon glyphicon-user"></a></span><a><%= user.name %></a></li>
+					<div class="edit-hover">
+						<span class="glyphicon glyphicon-cog edit-btn">
+						<div class="edit">
+							<ul>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/logout">退出登录</a></li>
+								<div class="clear"></div>
+							</ul>
+						</div>
+						<div class="triangle"></div>
+					</div>
+				</ul>
+			<% } %>
+		</div>
+	</div>
+</div>
+<div class="userdetail">
+	<div class="left-nav">
+		<form>
+			<fieldset><legend>账号设置</legend></fieldset>
+		</form>
+		<a href="/set/info" ><span class="glyphicon glyphicon-fire"><h2>我的信息</h2></a>
+		<a href="/set/photo" class="avtive"><span class="glyphicon glyphicon-fire"><h2>头像</h2></a>
+		<div class="line"></div>
+		<a href="#"><span class="glyphicon glyphicon-fire"><h2>隐私设置</h2></a>
+		<a href="#"><span class="glyphicon glyphicon-fire"></span><h2>消息设置</h2></a>
+		<a href="#"><span class="glyphicon glyphicon-facetime-video"></span><h2>屏蔽设置</h2></a>
+		<a href="#"><span class="glyphicon glyphicon-heart"></span><h2>偏好设置</h2></a>
+		<div class="line"></div>
+		<a href="#"><span class="glyphicon glyphicon-zoom-in"></span><h2>账号绑定</h2></a>
+		<div class="line"></div>
+		<a href="#"><span class="glyphicon glyphicon-zoom-in"></span><h2>我的勋章</h2></a>	
+	</div>
+	<div class="right-info">
+		<div class="head">
+			<h1>头像</h1>
+			<div class="pr-bar">
+				<span>资料完善度</span>
+				<div class="pr">
+					<div class="inner">
+						<span>80%</span>
+					</div>
+				</div>
+			</div>
+			<a href="">无法上传头像？尝试更多方式上传</a>
+		</div>
+		<div class="account-info">
+			
+		
+		</div>
+</div>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/userDetail-head.js"></script>
+</body>
+</html>

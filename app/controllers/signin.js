@@ -40,11 +40,10 @@ exports.signin = function(req, res) {
 
 //登录
 exports.signup=function(req,res){
-  var pasname=req.body.user.pasname
+  var passname=req.body.user.passname
   var password=req.body.user.password
- 
-  User.findOne({pasname:pasname},function(err,user){
- 
+  
+  User.findOne({passname:passname},function(err,user){
     if(err)
       console.log(err)
 
@@ -52,8 +51,6 @@ exports.signup=function(req,res){
       console.log("用户不存在")
       return res.redirect('/showsignin')
     }
-    console.log(user.password)
-    console.log(password)
     user.comparePassword(password,function(err,isMatch){
       if(err){
         console.log(err)

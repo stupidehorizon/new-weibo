@@ -13,6 +13,7 @@ $(document).ready(function(){
 	$('.submit1').click(function(){
 		var div=$(this).parent().parent().parent();
 		var input=div.find('input');
+		var span=input.next();
 		var name=input.val();
 		var id=$("#userid").val();
 	    $.post("/username",
@@ -21,7 +22,9 @@ $(document).ready(function(){
 	        id:id
 	    },
 	        function(data,status){
-	        alert("数据: \n" + data + "\n状态: " + status);
+	        	console.log(data.success)
+	        	console.log(span)
+	        	span.show();
 	    });
 	});
 })

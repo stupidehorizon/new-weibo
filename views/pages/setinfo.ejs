@@ -1,18 +1,18 @@
 <% include ../includes/header %>
-<link rel="stylesheet" type="text/css" href="./css/userdetail.css">
+<link rel="stylesheet" type="text/css" href="/css/setinfo.css">
 </head>
 <body>
 	<div class="fix-head">
 	<div class="head-content">
 		<div class="left-logo">
-			<a href="#"><span><!--logo--></span></a>
+			<a href="/"><span><!--logo--></span></a>
 		</div>
 		<div class="search-box">
 			<input type="text" placeholder="搜点什么？"><span class="glyphicon glyphicon-search"></span>
 		</div>
 		<div class="head-nav logo-btn">
 			<ul>
-				<li><a href="#"><span class="glyphicon glyphicon-home"></span>首页</a></li>
+				<li><a href="/"><span class="glyphicon glyphicon-home"></span>首页</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span>视频</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>发现</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-headphones"></span>游戏</a></li>
@@ -31,15 +31,15 @@
 						<span class="glyphicon glyphicon-cog edit-btn">
 						<div class="edit">
 							<ul>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
-								<li><a href="/useredit/<%= user._id %>">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
+								<li><a href="/set/info">账号设置</a></li>
 								<li><a href="/logout">退出登录</a></li>
 								<div class="clear"></div>
 							</ul>
@@ -57,7 +57,7 @@
 			<fieldset><legend>账号设置</legend></fieldset>
 		</form>
 		<a href="#" class="avtive"><span class="glyphicon glyphicon-fire"><h2>我的信息</h2></a>
-		<a href="#"><span class="glyphicon glyphicon-fire"><h2>头像</h2></a>
+		<a href="/set/photo"><span class="glyphicon glyphicon-fire"><h2>头像</h2></a>
 		<div class="line"></div>
 		<a href="#"><span class="glyphicon glyphicon-fire"><h2>隐私设置</h2></a>
 		<a href="#"><span class="glyphicon glyphicon-fire"></span><h2>消息设置</h2></a>
@@ -85,7 +85,7 @@
 			<div class="item-list">
 				<ul>
 					<li class="list-1">登录名</li>
-					<li class="list-2">122***231@qq.com</li>
+					<li class="list-2"><%= user.passname %></li>
 					<li class="list-3"><a class="show1">修改密码</a></li>
 				</ul>
 			</div>
@@ -97,7 +97,7 @@
 				</ul>
 				<ul>
 					<li class="list-4">现登录名</li>
-					<li class="list-5">122***231@qq.com</li>
+					<li class="list-5"><%= user.passname %></li>
 				</ul>
 				<ul>
 					<li class="list-4">新密码</li>
@@ -111,7 +111,7 @@
 			<div class="item-list">
 				<ul>
 					<li class="list-1">手机号</li>
-					<li class="list-2">181****6041</li>
+					<li class="list-2">123****8910</li>
 					<li class="list-3"><a class="show1">查看</a></li>
 				</ul>
 			</div>
@@ -123,7 +123,7 @@
 				</ul>
 				<ul>
 					<li class="list-4">现手机号</li>
-					<li class="list-5">181****6041</li>
+					<li class="list-5">123****8910</li>
 				</ul>
 				<ul>
 					<li class="list-4">新手机号</li>
@@ -137,7 +137,7 @@
 			<div class="item-list">
 				<ul>
 					<li class="list-1">昵称</li>
-					<li class="list-2">我会记得你啊</li>
+					<li class="list-2"><%= user.name %></li>
 					<li class="list-3"><a class="show1">编辑</a></li>
 				</ul>
 			</div>
@@ -155,7 +155,7 @@
 					<li class="list-4">新昵称</li>
 					<li class="list-5">
 						<input id="newName" type="text" name="newName" max-length="10">
-						<input type="hidden" name="userid" value="<%= user._id %>" id="userid">
+						<input type="hidden" name="userid" value="<%= user._id %>" id="userid"><span class="hide-info">更改成功，请刷新页面</span>
 					</li>
 				</ul>
 				<ul>
@@ -323,6 +323,6 @@
 	</div>
 </div>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="./js/userDetail.js"></script>
+<script type="text/javascript" src="/js/userDetail.js"></script>
 </body>
 </html>
