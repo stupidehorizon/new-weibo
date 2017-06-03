@@ -1,5 +1,5 @@
 <% include ../includes/header %>
-<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
 <div class="fix-head">
 	<div class="head-content">
@@ -71,7 +71,19 @@
 				<div class="func-area logo-btn">
 					<ul>
 						<li><a href="#"><span class="glyphicon glyphicon-magnet"></span>表情</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-picture"></span>图片/set/info
+						<li><a href="#" class="photo-wrap-show"><span class="glyphicon glyphicon-picture"></span>图片</a></li>
+						<div class="photo-wrap">
+							<i class="glyphicon glyphicon-remove photo-close"></i>
+							<h2>本地上传</h2>
+							<p>请选择图片文件：JPG/GIF<p>
+							<div id="img-wrap">
+								<div class="input-box">
+									<img class="cover">
+									<input type="file" name="img" class="img">
+									<span class="glyphicon glyphicon-plus"></span>
+								</div>
+							</div>
+						</div>
 						<li><a href="#"><span class="glyphicon glyphicon-facetime-video"></span>视频</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-header"></span>话题</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-align-center"></span>头条文章</a></li>
@@ -103,7 +115,9 @@
 						<h2><%= weibo.content %> </h2>
 					</div>
 					<div class="img-box">
-						<img src="<%= weibo.imgUrl %>">
+						<% weibo.imgUrl.forEach((img,index)=>{ %>
+							<img src="<%= img %>">
+						<% }) %>
 					</div>
 					<div class="content-bottom logo-btn">
 						<ul>
@@ -141,6 +155,6 @@
 	</div>
 </div>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="/js/index.js"></script>
 </body>
 </html>

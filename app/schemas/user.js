@@ -9,6 +9,10 @@ var UserSchema = new mongoose.Schema({
   },
   password: String,
   name:String,
+  photo:{
+    type:String,
+    default:'/img/01.jpg'
+  },
   sex:String,
   // 0: nomal user
   // 1: verified user

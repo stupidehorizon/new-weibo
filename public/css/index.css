@@ -226,6 +226,7 @@ a {
   box-shadow: 0 0 2px #cccccc inset;
 }
 .container .middle-content .publish-area .func-area {
+  position: relative;
   font-size: 14px;
   line-height: 35px;
 }
@@ -252,6 +253,113 @@ a {
   border-radius: 3px;
   color: #fff;
   border: 0;
+}
+.container .middle-content .publish-area .func-area .photo-wrap {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1001;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 3px;
+}
+.container .middle-content .publish-area .func-area .photo-wrap:before {
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-color: transparent transparent #dadada transparent;
+  content: '';
+  position: absolute;
+  top: -20px;
+  border-style: solid;
+  left: 30%;
+}
+.container .middle-content .publish-area .func-area .photo-wrap:after {
+  width: 0;
+  height: 0;
+  border-width: 11px;
+  border-color: transparent transparent #fff transparent;
+  content: '';
+  position: absolute;
+  top: -20px;
+  border-style: solid;
+  left: 30%;
+}
+.container .middle-content .publish-area .func-area .photo-wrap i {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+.container .middle-content .publish-area .func-area .photo-wrap i:hover {
+  color: #ff7d0e;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap {
+  padding: 10px;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap img {
+  height: 80px;
+  width: 80px;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .input-box {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .input-box img {
+  height: 100%;
+  width: 100%;
+  border: 3px dashed #ccc;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .input-box input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .input-box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -9px 0 0 -9px;
+  color: #ccc;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .input-box:hover img {
+  border-color: #ff7d0e;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .input-box:hover span {
+  color: #ff7d0e;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .img-box {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .img-box img {
+  height: 100%;
+  width: 100%;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .img-box input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.container .middle-content .publish-area .func-area .photo-wrap #img-wrap .img-box span {
+  display: none;
 }
 .container .middle-content .content-area {
   margin-top: 10px;

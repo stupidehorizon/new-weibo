@@ -17,5 +17,6 @@ module.exports=function(app){
 	app.get('/set/info',Set.info)
 	app.post('/username',Set.namechange)
 	app.get('/set/photo',Set.photo)
+	app.post('/set/photochange',multipartMiddleware,Set.photochange)
 }
 

@@ -231,6 +231,7 @@ a{
 				box-shadow: 0 0 2px #cccccc inset;
 			}
 			.func-area{
+				position: relative;
 				font-size: 14px;
 				line-height: 35px;
 				.dot{
@@ -256,6 +257,115 @@ a{
 					border-radius: 3px;
 					color: #fff;
 					border: 0;
+				}
+				.photo-wrap{
+					display: none;
+					position: absolute;
+					background-color: #fff;
+					border: 1px solid #ccc;
+					z-index: 1001;
+					box-shadow: 0 4px 20px 1px rgba(0,0,0,0.2);
+					padding: 10px;
+					border-radius: 3px;
+					&:before{
+							width: 0;
+							height: 0;
+							border-width: 10px;
+							border-color: transparent transparent #dadada transparent;
+							content:'';
+							position: absolute;
+							top: -20px;
+							border-style: solid;
+							left: 30%;
+						}
+						&:after{
+							width: 0;
+							height: 0;
+							border-width: 11px;
+							border-color: transparent transparent #fff transparent;
+							content:'';
+							position: absolute;
+							top: -20px;
+							border-style: solid;
+							left: 30%;
+						}
+					i{
+						position: absolute;
+						top: 8px;
+						right: 8px;
+						cursor:pointer;
+						padding: 5px;
+						&:hover{
+							color:#ff7d0e;
+						}
+					}
+					#img-wrap{
+						padding: 10px;
+						-moz-column-count:3; 
+						-webkit-column-count:3; 
+						column-count:3;
+						img{
+							height: 80px;
+							width: 80px;
+						}
+						.input-box{
+							width: 80px;
+							height: 80px;
+							position: relative;
+							overflow: hidden;
+							img{
+								height: 100%;
+								width: 100%;
+								border:3px dashed #ccc;
+							}
+							input{
+								opacity: 0;
+								position: absolute;
+								top:0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								cursor:pointer;
+							}
+							span{
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								margin: -9px 0 0 -9px;
+								color: #ccc;
+							}
+							&:hover{
+								img{
+									border-color:#ff7d0e; 
+								}
+								span{
+									color: #ff7d0e;
+								}
+							}
+						}
+						.img-box{
+							width: 80px;
+							height: 80px;
+							position: relative;
+							overflow: hidden;
+							img{
+								height: 100%;
+								width: 100%;
+							}
+							input{
+								opacity: 0;
+								position: absolute;
+								top:0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								cursor:pointer;
+							}
+							span{
+								display: none;
+							}
+						}
+					}
 				}
 			}
 		}
