@@ -3,6 +3,7 @@ const Weibo=require('../models/weibo')
 exports.index=function(req,res){
 	Weibo
       .find({})
+      .sort({'_id':-1})
       .populate('from', 'name')
       .exec(function(err, weibos) {
 	        res.render('index', {

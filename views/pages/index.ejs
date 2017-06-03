@@ -107,7 +107,7 @@
 			<% weibos.forEach((weibo)=>{ %>
 				<div class="content-box">
 					<div class="head-img">
-						<a href="#"><img src="./img/01.jpg"></a>
+						<a href="#"><img src="/upload/<%= user.photo %>"></a>
 					</div>
 					<div class="content">
 						<h1><%= weibo.from.name %></h1>
@@ -116,7 +116,7 @@
 					</div>
 					<div class="img-box">
 						<% weibo.imgUrl.forEach((img,index)=>{ %>
-							<img src="<%= img %>">
+							<img src="/upload/<%= img %>">
 						<% }) %>
 					</div>
 					<div class="content-bottom logo-btn">
@@ -133,7 +133,9 @@
 	</div>
 	<div class="right-info">
 		<div class="personal-info">
-			<div class="avatar"></div>
+			<div class="avatar">
+				<img src="/upload/<%= user.photo %>">
+			</div>
 			<div class="skin">
 				<img src="./img/02.jpg">
 			</div>

@@ -11,7 +11,7 @@ var UserSchema = new mongoose.Schema({
   name:String,
   photo:{
     type:String,
-    default:'/img/01.jpg'
+    default:'xlwb.jpg'
   },
   sex:String,
   // 0: nomal user

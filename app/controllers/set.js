@@ -54,11 +54,12 @@ exports.photochange=function(req,res){
 		    		if (err) {
 	          			console.log(err)
 	        		}
-		    		user.update({photo:newPath},function(err,user){
+		    		user.update({photo:poster},function(err,user){
 		    			if (err) {
 			          		console.log(err)
 			        	}
-		    			res.render('setphoto')	
+        		 		app.locals.user.photo=poster
+		    			res.render('setphoto',{title:'账号设置'})	
 		    		})		    		
 		    	})
 		    })
