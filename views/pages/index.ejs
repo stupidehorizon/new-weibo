@@ -107,7 +107,7 @@
 			<% weibos.forEach((weibo)=>{ %>
 				<div class="content-box">
 					<div class="head-img">
-						<a href="#"><img src="/upload/<%= user.photo %>"></a>
+						<a href="#"><img src="/upload/<%= weibo.from.photo %>"></a>
 					</div>
 					<div class="content">
 						<h1><%= weibo.from.name %></h1>
