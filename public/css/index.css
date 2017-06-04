@@ -407,22 +407,14 @@ a {
   margin-bottom: 10px;
 }
 .container .middle-content .content-area .content-box .content .img-box {
-  -moz-column-count: 3;
-  /* Firefox */
-  -webkit-column-count: 3;
-  /* Safari and Chrome */
-  column-count: 3;
-  -webkit-column-gap: 110px;
-  /* Chrome, Safari, Opera */
-  -moz-column-gap: 10px;
-  /* Firefox */
-  column-gap: 10px;
-  margin: 5px;
+  margin: 5px 1px 5px 0;
+  padding-bottom: 10px;
 }
 .container .middle-content .content-area .content-box .content .img-box img {
-  margin-top: 5px;
-  width: 100%;
+  margin: 5px;
+  width: 150px;
   height: auto;
+  cursor: pointer;
 }
 .container .middle-content .content-area .content-box .content-bottom {
   border-top: 1px solid  #ccc;

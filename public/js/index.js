@@ -29,3 +29,11 @@ $(".photo-close").click(function(){
 $(".photo-wrap-show").click(function(){
 	$(".photo-wrap").show();
 })
+
+$('.weibo-img').click(function(){
+	console.log($(this).css('width'))
+	if($(this).css('width')!='487px')
+		$(this).parent().children().css('width','100%');
+	else
+		$(this).parent().children().css('width','150px');
+})

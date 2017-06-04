@@ -89,7 +89,11 @@
 						<li><a href="#"><span class="glyphicon glyphicon-align-center"></span>头条文章</a></li>
 						<li><a href="#" class="dot">···</a></li>
 						<li><a href="#" class="privacy">公开<span class="glyphicon glyphicon-chevron-down"></span></a></li>
+						<% if(user){ %>
 						<input type="submit" value="发布" id="publish">
+						<% }else{ %>
+						<a href="/showsignin" id="publish">发布</a>
+						<% } %>
 					</ul>
 				</div>
 			</form>
@@ -113,11 +117,11 @@
 						<h1><%= weibo.from.name %></h1>
 						<p><%= moment(weibo.meta.createAt).fromNow() %> 来自iphone8</p>
 						<h2><%= weibo.content %> </h2>
-					</div>
-					<div class="img-box">
-						<% weibo.imgUrl.forEach((img,index)=>{ %>
-							<img src="/upload/<%= img %>">
-						<% }) %>
+						<div class="img-box">
+							<% weibo.imgUrl.forEach((img,index)=>{ %>
+								<img src="/upload/<%= img %>" class="weibo-img">
+							<% }) %>
+						</div>
 					</div>
 					<div class="content-bottom logo-btn">
 						<ul>
