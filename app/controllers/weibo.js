@@ -7,7 +7,7 @@ exports.imgUpload=function(req,res,next){
 	let pathArr=[]
 	let len=imgArr.length
 	if(imgArr instanceof Array){
-		imgArr.forEach((item,index)=>{ 
+		imgArr.forEach(function(item,index){ 
 			const imgType = item.type
 		 	const imgPath = item.path
 		  	const imgName = item.name
@@ -15,7 +15,7 @@ exports.imgUpload=function(req,res,next){
 			    fs.readFile(imgPath, function(err, data) {
 				    let timestamp = Date.now()
 				    let type = imgType.split('/')[1]
-				    let poster = timestamp + '.' + type
+				    let poster = timestamp + index+'.' + type
 				    let newPath = path.join(__dirname, '../../', '/public/upload/' + poster)
 				    pathArr.push(poster)
 				    fs.writeFile(newPath, data, function(err) {			  
@@ -37,7 +37,6 @@ exports.imgUpload=function(req,res,next){
 exports.publish= (req,res)=>{
     let _weibo= req.body.weibo
     _weibo.imgUrl=req.poster
-   
     let weibo = new Weibo(_weibo)
     weibo.save((err,weibo)=>{
         if (err) 
