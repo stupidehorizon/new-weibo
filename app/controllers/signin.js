@@ -58,7 +58,6 @@ exports.signup=function(req,res){
       if(isMatch){
         console.log("登录成功")
         req.session.user=user             //设置session
-        app.locals.user=user
         return res.redirect('/')
       }else{
         console.log('password is not matched')
@@ -70,6 +69,5 @@ exports.signup=function(req,res){
 
 exports.logout=function(req,res){
   delete req.session.user
- app.locals.user=false
   res.redirect('/')
 }

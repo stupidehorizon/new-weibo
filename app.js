@@ -38,6 +38,7 @@ app.use(morgan(':method :url :status'))
 app.use(session(
 	{
 	  secret:'weibo',
+	  name:'user',
 	  resave:false,
 	  saveUninitialized: true,
 	  store:new mongoStore({                                   //将session存储到mongodb数据库
