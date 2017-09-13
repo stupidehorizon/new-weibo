@@ -8,7 +8,7 @@ node+express+ejs+mongodb 打造的一个实时分享平台，可实现注册，�
 - 服务器：阿里云，nginx，linux。
 
 ## 项目地址
-[项目地址](http://http://www.cdutphotos.club/ )
+[项目在线地址](www.cdutphotos.club/)
 ## 预览
 [![](http://wx2.sinaimg.cn/mw690/005NdwvWgy1fg90flsmf7g314d0q6npe.gif)](http://http://wx2.sinaimg.cn/mw690/005NdwvWgy1fg90flsmf7g314d0q6npe.gif)
 ## 功能
